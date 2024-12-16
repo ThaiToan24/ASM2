@@ -174,42 +174,42 @@ namespace ASM2
         }
         private void SearchCategory(string searchText)
         {
-            string query = "SELECT CategoryID, CategoryName FROM Category WHERE CategoryID LIKE @SearchKeyword";
-            DatabaseConnection conn = new DatabaseConnection();
-            using (SqlConnection connection = conn.GetConnection())
-            {
-                try
+                string query = "SELECT CategoryID, CategoryName FROM Category WHERE CategoryID LIKE @SearchKeyword OR CategoryName LIKE @SearchKeyword";
+                DatabaseConnection conn = new DatabaseConnection();
+                using (SqlConnection connection = conn.GetConnection())
                 {
-                    connection.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    try
                     {
-                        string searchValue = txtSearch.Text.Trim(); // Use the '%' character to search for similar
-                        cmd.Parameters.AddWithValue("@SearchKeyword", searchValue);
-
-                        // cmd.Parameters.AddWithValue("@SearchText", "%" + searchText + "%");
-
-                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        connection.Open();
+                        using (SqlCommand cmd = new SqlCommand(query, connection))
                         {
-                            lvListCategory.Items.Clear();
-                            while (reader.Read())
-                            {
-                                string categoryID = reader["CategoryID"].ToString();
-                                string categoryName = reader["CategoryName"].ToString();
+                            // Add '%' wildcard to the search text to search for partial matches
+                            string searchValue = "%" + searchText.Trim() + "%";
+                            cmd.Parameters.AddWithValue("@SearchKeyword", searchValue);
 
-                                ListViewItem item = new ListViewItem(categoryID);
-                                //item.SubItems.Add(orderID);
-                                item.SubItems.Add(categoryID);
-                                item.SubItems.Add(categoryName);
-                                lvListCategory.Items.Add(item);
+                            using (SqlDataReader reader = cmd.ExecuteReader())
+                            {
+                                lvListCategory.Items.Clear();
+                                while (reader.Read())
+                                {
+                                    string categoryID = reader["CategoryID"].ToString();
+                                    string categoryName = reader["CategoryName"].ToString();
+
+                                    // Create a new ListViewItem and add the CategoryID and CategoryName
+                                    ListViewItem item = new ListViewItem(categoryID);
+                                    item.SubItems.Add(categoryName); // Add CategoryName, not CategoryID again
+                                    lvListCategory.Items.Add(item);
+                                }
                             }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error while searching category: " + ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("error while searching category: " + ex.Message);
-                }
-            }
+            
+
         }
         private void DeleteCategory()
         {
