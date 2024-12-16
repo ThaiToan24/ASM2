@@ -141,9 +141,9 @@
             // 
             // textEmail
             // 
-            this.textEmail.Location = new System.Drawing.Point(211, 195);
+            this.textEmail.Location = new System.Drawing.Point(223, 195);
             this.textEmail.Name = "textEmail";
-            this.textEmail.Size = new System.Drawing.Size(177, 22);
+            this.textEmail.Size = new System.Drawing.Size(165, 22);
             this.textEmail.TabIndex = 12;
             // 
             // label7
@@ -158,30 +158,30 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(211, 233);
+            this.txtAddress.Location = new System.Drawing.Point(223, 233);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(177, 22);
+            this.txtAddress.Size = new System.Drawing.Size(165, 22);
             this.txtAddress.TabIndex = 10;
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.Location = new System.Drawing.Point(211, 97);
+            this.txtCustomerName.Location = new System.Drawing.Point(223, 97);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(177, 22);
+            this.txtCustomerName.Size = new System.Drawing.Size(165, 22);
             this.txtCustomerName.TabIndex = 9;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(211, 143);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(223, 143);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(177, 22);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(165, 22);
             this.txtPhoneNumber.TabIndex = 8;
             // 
             // txtCustomerID
             // 
-            this.txtCustomerID.Location = new System.Drawing.Point(211, 55);
+            this.txtCustomerID.Location = new System.Drawing.Point(223, 55);
             this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(177, 22);
+            this.txtCustomerID.Size = new System.Drawing.Size(165, 22);
             this.txtCustomerID.TabIndex = 5;
             // 
             // label4
