@@ -41,13 +41,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtOrder = new System.Windows.Forms.TextBox();
-            this.txtOrderDetail = new System.Windows.Forms.TextBox();
+            this.txtOrderDetailID = new System.Windows.Forms.TextBox();
             this.txtTieID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lvListOrderDetail = new System.Windows.Forms.ListView();
-            this.orderdetail = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.orderdetailid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.order = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tieid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stockquantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -128,7 +128,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Controls.Add(this.txtOrder);
-            this.groupBox1.Controls.Add(this.txtOrderDetail);
+            this.groupBox1.Controls.Add(this.txtOrderDetailID);
             this.groupBox1.Controls.Add(this.txtTieID);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
@@ -155,9 +155,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 32);
+            this.label2.Size = new System.Drawing.Size(187, 32);
             this.label2.TabIndex = 24;
-            this.label2.Text = "OrderDetail";
+            this.label2.Text = "OrderDetailID";
             // 
             // txtQuantity
             // 
@@ -190,12 +190,12 @@
             this.txtOrder.Size = new System.Drawing.Size(177, 22);
             this.txtOrder.TabIndex = 9;
             // 
-            // txtOrderDetail
+            // txtOrderDetailID
             // 
-            this.txtOrderDetail.Location = new System.Drawing.Point(211, 53);
-            this.txtOrderDetail.Name = "txtOrderDetail";
-            this.txtOrderDetail.Size = new System.Drawing.Size(177, 22);
-            this.txtOrderDetail.TabIndex = 8;
+            this.txtOrderDetailID.Location = new System.Drawing.Point(211, 53);
+            this.txtOrderDetailID.Name = "txtOrderDetailID";
+            this.txtOrderDetailID.Size = new System.Drawing.Size(177, 22);
+            this.txtOrderDetailID.TabIndex = 8;
             // 
             // txtTieID
             // 
@@ -237,7 +237,7 @@
             // lvListOrderDetail
             // 
             this.lvListOrderDetail.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.orderdetail,
+            this.orderdetailid,
             this.order,
             this.tieid,
             this.stockquantity,
@@ -251,10 +251,10 @@
             this.lvListOrderDetail.View = System.Windows.Forms.View.Details;
             this.lvListOrderDetail.SelectedIndexChanged += new System.EventHandler(this.lvListOrderDetail_SelectedIndexChanged);
             // 
-            // orderdetail
+            // orderdetailid
             // 
-            this.orderdetail.Text = "Order Detail";
-            this.orderdetail.Width = 106;
+            this.orderdetailid.Text = "Order DetailID";
+            this.orderdetailid.Width = 106;
             // 
             // order
             // 
@@ -360,7 +360,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtOrder;
-        private System.Windows.Forms.TextBox txtOrderDetail;
+        private System.Windows.Forms.TextBox txtOrderDetailID;
         private System.Windows.Forms.TextBox txtTieID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
@@ -372,7 +372,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.ColumnHeader orderdetail;
+        private System.Windows.Forms.ColumnHeader orderdetailid;
         private System.Windows.Forms.ColumnHeader order;
         private System.Windows.Forms.ColumnHeader tieid;
         private System.Windows.Forms.ColumnHeader stockquantity;

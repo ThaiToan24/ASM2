@@ -79,7 +79,7 @@ namespace ASM2
         }
         private void AddOrderDetail()
         {
-            string orderDetailID = txtOrderDetail.Text;
+            string orderDetailID = txtOrderDetailID.Text;
             string order = txtOrder.Text;
             string tieID = txtTieID.Text;
             string quantity = txtQuantity.Text;
@@ -115,7 +115,7 @@ namespace ASM2
             if (lvListOrderDetail.SelectedItems.Count > 0)
             {
                 ListViewItem selectedItem = lvListOrderDetail.SelectedItems[0];
-                txtOrderDetail.Text = selectedItem.SubItems[0].Text;
+                txtOrderDetailID.Text = selectedItem.SubItems[0].Text;
                 txtOrder.Text = selectedItem.SubItems[1].Text;
                 txtTieID.Text = selectedItem.SubItems[2].Text;
                 txtQuantity.Text = selectedItem.SubItems[3].Text;
@@ -129,7 +129,7 @@ namespace ASM2
         }
         private void UpdateOrderDetail()
         {
-            string orderDetail = txtOrderDetail.Text;
+            string orderDetail = txtOrderDetailID.Text;
             string order = txtOrder.Text;
             string tieID = txtTieID.Text;
             string quantity = txtQuantity.Text;
@@ -194,12 +194,12 @@ namespace ASM2
         }
         private void ClearOrderDetailInput()
         {
-            txtOrderDetail.Clear();
+            txtOrderDetailID.Clear();
             txtOrder.Clear();
             txtTieID.Clear();
             txtQuantity.Clear();
             txtPrice.Clear();
-            txtOrderDetail.Focus();
+            txtOrderDetailID.Focus();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
